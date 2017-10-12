@@ -1,4 +1,4 @@
-## Advance Lane Lines Project
+﻿## Advance Lane Lines Project
 
 The goals / steps of this project are the following:
 
@@ -135,7 +135,7 @@ xm_per_pix = 3.7/700 # meters per pixel in x dimension
 ```
 ![alt text][image11] 
 
-I calculated the position of the vehicle respect the center in lines 211 through 214 inside `find_lines()` in my code in `advance_lane_lines.ipynb` - Find Lines section. First pixel of the polynomial curve corresponding to the bottom of the image is picked (left_fitx[0] and right_fitx[0]). Distance from that points to my reference vertical lines (left=200px - right=1080px) are measured. The calculated position is the average offset between both distances.
+I calculated the position of each line respect the center in lines 211 through 214 inside `find_lines()` in `advance_lane_lines.ipynb` - Find Lines section. Last pixel of the polynomial curve corresponding to the bottom of the image is picked (left_fitx[-1] and right_fitx[-1]). The calculated car offset position is the average distance between both lines measurements to the center of the image and it is done in line 256 of `overlay_lane()` function. 
 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
